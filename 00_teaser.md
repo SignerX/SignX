@@ -1,0 +1,3 @@
+## Abstract
+
+We propose SignX, a framework for continuous sign language recognition in a compact pose-rich latent space. Sign language recognition is challenging due to multimodal signals and heterogeneous pose formats. SignX unifies pose estimates from SMPLer-X, DWPose, MediaPipe, PrimeDepth, and Sapiens Segmentation into a single information-dense representation. We then train a ViT-based Video2Pose module to extract this latent representation directly from raw videos. Finally, a temporal modeling and sequence refinement method operates entirely in the latent space, enabling end-to-end recognition while reducing computational cost. Experiments show that SignX achieves state-of-the-art accuracy on continuous sign language recognition benchmarks.

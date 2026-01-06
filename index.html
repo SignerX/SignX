@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SignX demo for continuous sign language recognition in compact pose-rich latent space.">
+    <title>SignX: Continuous Sign Recognition in Compact Pose-Rich Latent Space</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/13.0.1/markdown-it.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- æ·»åŠ ç½‘ç«™å›¾æ ‡ -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23eef0f2'/%3E%3Ctext x='16' y='26' font-family='-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif' font-size='26' font-weight='500' text-anchor='middle' fill='%23202122'%3EW%3C/text%3E%3C/svg%3E">
+    <!-- ä¸º Safari æµè§ˆå™¨æ·»åŠ å›¾æ ‡ -->
+    <link rel="apple-touch-icon" sizes="180x180" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23eef0f2'/%3E%3Ctext x='16' y='26' font-family='-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif' font-size='26' font-weight='500' text-anchor='middle' fill='%23202122'%3EW%3C/text%3E%3C/svg%3E">
+    <!-- å¼•å…¥æ ·å¼æ–‡ä»¶ -->
+    <link rel="stylesheet" href="./static/styles.css">
+    <!-- å¼•å…¥ Cite æŒ‰é’®æ ·å¼ -->
+</head>
+<body>
+    <header class="header">
+        <h1 class="header-title">SignX
+            <!-- 
+            <select class="version-select" onchange="if(this.value) window.location.href=this.value" style="padding: 2px 0; border: none; border-radius: 4px; background: white; cursor: pointer; font-size: 12px; height: 20px; vertical-align: middle; -webkit-appearance: none; -moz-appearance: none; appearance: none;">
+                <option value="" selected>v1-init</option>
+            </select>--> 
+      </h1>
+        <div class="header-links">
+            <a href="https://github.com/SignerX" class="header-link">[Organization]</a>
+            <a href="https://x.com/SenFang01" class="header-link">[Author X]</a>
+        </div>
+    </header>
+
+    <div class="container" id="title">
+
+            <span class="highlight-notice">Let Pose Recognition Happen in Latent Space, as well.</span>
+        
+            <h1 class="title">SignX: Continuous Sign Recognition in Compact Pose-Rich Latent Space</h1>
+            
+            <div class="authors">
+                <a href="https://x.com/SenFang01" class="author-link">Sen Fang</a><sup>1</sup>,
+                <a href="https://github.com/YalinFeng01" class="author-link">Yalin Feng</a><sup>2*</sup>,
+                Chunyu Sui<sup>3</sup>,
+                <a href="https://rjzhb.github.io/" class="author-link">Hongbin Zhong</a><sup>4</sup>,
+                Hongwei Yi<sup>5</sup>,
+                <a href="https://scholar.google.com/citations?user=a7VNhCIAAAAJ" class="author-link">Dimitris N. Metaxas</a><sup>1</sup>
+            </div>
+
+            <div class="affiliations">
+                <sup>1</sup>Rutgers University, &nbsp <sup>2</sup>Nanyang Technological University, &nbsp <sup>3</sup>Columbia University, &nbsp <br><sup>4</sup>Georgia Institute of Technology, &nbsp <sup>5</sup>Max Planck Institute for Intelligent Systems
+                <br>
+                <div style="text-align: center; color: black !important;">
+                    <sup>*</sup>Equal Contribution
+                </div>
+            </div>
+
+
+            <!-- 
+            <div style="text-align: center; margin: 1em 0;">
+                <span style="font-size: 1.5em; color: #28a745; font-weight: 800; font-family: Verdana, Geneva, sans-serif;">
+                    ArXiv 2026
+                </span>
+            </div>-->
+
+            <div class="links">
+                <a href="https://arxiv.org/abs/2504.16315" class="button">
+                    <i class="fa fa-file-lines" aria-hidden="true"></i> Paper
+                </a>
+                <a href="#demos" class="button">
+                    <i class="fa fa-play-circle" aria-hidden="true"></i> Demo
+                </a>
+                <a href="#method" class="button">
+                    <i class="fa fa-sitemap" aria-hidden="true"></i> Method
+                </a>
+                <a href="#results" class="button">
+                    <i class="fa fa-chart-line" aria-hidden="true"></i> Results
+                </a>
+                <a href="#paper-overview" class="button">
+                    <i class="fa fa-file-lines" aria-hidden="true"></i> Paper Overview
+                </a>
+            </div>
+
+
+        <div class="mixed-content">
+            <!-- All markdown sections will be automatically generated here by JavaScript -->
+        </div>
+    </div>
+
+    <footer>
+        <p>Anonymous demo page for SignX.</p>
+    </footer>
+
+    <script>
+        // Initialize markdown-it
+        const md = window.markdownit({
+            html: true,
+            linkify: true,
+            typographer: true,
+            highlight: function (str, lang) {
+                if (lang && hljs.getLanguage(lang)) {
+                    try {
+                        return hljs.highlight(str, { language: lang }).value;
+                    } catch (__) {}
+                }
+                return '';
+            }
+        });
+
+        // Simplified configuration with navigation groups
+        // Define your markdown files and their navigation groups here
+        // Everything else (id, title, sections, navigation menu) will be automatically generated
+        const markdownFiles = [
+            {
+                group: 'Overview',
+                files: [
+                    '00_teaser.md',
+                    '01_abstract.md'
+                ]
+            },
+            {
+                group: 'Paper',
+                files: [
+                    '02_method.md',
+                    '03_results.md',
+                    '04_pdf.md'
+                ]
+            }
+        ];
+    </script>
+
+    <!-- Main application logic -->
+    <script src="./static/main.js"></script>
+
+    <!-- å¼•å…¥ Cite æŒ‰é’®æ¨¡å— -->
+</body>
+</html>
+
